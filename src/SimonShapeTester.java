@@ -13,15 +13,9 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 
-/*
- *  1) Read if each keypress matches the order
- *  2) move add to guess order to right after e.getkeycode line
- *  3) 
- */
-
 /**
  * 
- * @author cooperjd
+ * @author Jamal D. Cooper
  * The Simon Game
  */
 public class SimonShapeTester{
@@ -144,7 +138,7 @@ public class SimonShapeTester{
 	  }
 	  
 	  /**
-	   * Randomly highlights one of the colors
+	   * Continually Randomly highlights one of the colors dependent upon the level 
 	   */
 	  public static void Highlight(){
 		  boolean restart = false;
@@ -183,8 +177,8 @@ public class SimonShapeTester{
 	  /**
 	   * Checks the users input once the user has matched the number of 
 	   * key presses with the number of highlights
-	 * @throws IOException 
-	 * @throws FileNotFoundException 
+	   * @throws IOException 
+	   * @throws FileNotFoundException 
 	   * 
 	   */
 	  private static void checkAnswers() throws FileNotFoundException, IOException{
@@ -211,6 +205,11 @@ public class SimonShapeTester{
 		  Highlight();
 	  }
 	  
+	  /**
+	   * Updates the changes in the JLabels of the JFrame 
+	   * @throws IOException 
+	   * @throws FileNotFoundException 
+	   */
 	  private static void updateLabels() throws FileNotFoundException, IOException{
 		  level.setText("Level:  x" + numberCount);
 		  

@@ -5,7 +5,7 @@ import java.util.*;
 
 /**
  * 
- * @author cooperjd
+ * @author Jamal D. Cooper
  * Class that holds and manipulates all of the colors
  *
  */
@@ -52,6 +52,11 @@ public class ColorManager {
 		return colors.get(index);
 	}
 	
+	/**
+	 * Gets a color from the palette
+	 * @param index The index of the color in the highlights to return
+	 * @return The color that was retrieved from the highlights
+	 */
 	public Color getHighlight(int index){
 		return highlights.get(index);
 	}

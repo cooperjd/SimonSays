@@ -8,12 +8,18 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-
+/**
+*	@author Jamal D. Cooper
+*	Class writes and reads the score from a file
+*/
 public class Scores {
+	//The location of the file where the score will be stored
 	private final static String SCORE_FILE = "res\\scores\\highscores.txt";
 	
+	//The highest score reached
 	private static int highScore;
 	
+	//Sets the high score and writes it into the file
 	public static void setHighScore(int score) throws FileNotFoundException, IOException{
 		highScore = score;
 		
@@ -24,6 +30,7 @@ public class Scores {
 		oos.close();
 	}
 	
+	//Resads the high score from the file and returns that value 
 	public static int getHighScore() throws FileNotFoundException, IOException{
 		File scoreFile = new File(SCORE_FILE);
 		if(scoreFile.exists()){

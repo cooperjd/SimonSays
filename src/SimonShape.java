@@ -39,7 +39,10 @@ class SimonShape extends JComponent{
 	private JFrame j;
 	private SimonShape ss;
 	
-	
+	/**
+	* Constructor 
+	* @param j The parent JFrame of this object 
+\	*/
 	public SimonShape(JFrame j){
 		this.j = j;
 		this.ss = this;
@@ -55,22 +58,18 @@ class SimonShape extends JComponent{
 	    //Top Right
 	    ga.setPaint(color1);
 		ga.fillArc(size, size, 300, 300, 45, 90);
-		//c.removeColor(r1);
 		
 		//Top Left
 		ga.setPaint(color2);
 		ga.fillArc(size, size, 300, 300, 135, 90);
-		//c.removeColor(r2);
 
 		//Bottom Left
 		ga.setPaint(color3);
 		ga.fillArc(size, size, 300, 300, 225, 90);
-		//c.removeColor(r3);
 		
 		//Bottom Right
 		ga.setPaint(color4);
 		ga.fillArc(size, size, 300, 300, 315, 90);
-		//c.removeColor(r4);
 	}
 	
 	/**
@@ -248,6 +247,9 @@ class SimonShape extends JComponent{
 		updateGraphics();
 	}
 	
+	/**
+	* Updates any changes in the parent JFrames graphics
+	*/
 	private void updateGraphics(){
 		j.getContentPane().remove(ss);
 		j.getContentPane().add(ss, BorderLayout.CENTER);

@@ -3,6 +3,10 @@ package cooperjd.simon;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+/**
+*	@author Jamal D. Cooper
+*	Class that checks for key presses
+*/
 public class KeyPadListener implements KeyListener{
 	public boolean upPressed;
 	public boolean downPressed;
